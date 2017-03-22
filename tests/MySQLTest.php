@@ -1,7 +1,9 @@
 <?php
 namespace DQNEO\MySQLTest;
 
-class MySQLTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+
+class MySQLTest extends TestCase
 {
     private function getPDO()
     {
