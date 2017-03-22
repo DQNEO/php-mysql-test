@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit
+         bootstrap="vendor/autoload.php">
+
+  <testsuite name="Test Suite">
+    <directory>./tests</directory>
+  </testsuite>
+
+  <filter>
+    <whitelist>
+      <directory>./</directory>
+      <exclude>
+        <directory>./vendor</directory>
+      </exclude>
+    </whitelist>
+  </filter>
+
+  <php>
+    <var name="DB_DSN" value="mysql:dbname=mysql;host=127.0.0.1" />
+    <var name="DB_USER" value="root" />
+    <var name="DB_PASS" value="pass" />
+  </php>
+
+ </phpunit>
