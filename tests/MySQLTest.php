@@ -5,7 +5,7 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
 {
     private function getPDO()
     {
-        $pdo = new \PDO(getenv('DB_DSN'), getenv9('DB_USER'), getenv('DB_PASS'));
+        $pdo = new \PDO(getenv('DB_DSN'), getenv('DB_USER'), getenv('DB_PASS'));
         return $pdo;
     }
 
