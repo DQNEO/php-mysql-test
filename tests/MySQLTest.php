@@ -24,4 +24,19 @@ class MySQLTest extends TestCase
         $ret = $stmt->execute();
         $this->assertTrue($ret);
     }
+
+
+    public function testExecute()
+    {
+        $pdo = $this->getPDO();
+
+        $sql = 'SELECT 1  LIMIT :limit  OFFSET :offset';
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':limit', 2, \PDO::PARAM_INT);
+        $stmt->bindValue(':offset', 3, \PDO::PARAM_INT);
+        $res = $stmt->execute();
+        $this->assertTrue($res);
+    }
+
 }
