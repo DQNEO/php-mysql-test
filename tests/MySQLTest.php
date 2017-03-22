@@ -3,9 +3,15 @@ namespace DQNEO\MySQLTest;
 
 class MySQLTest extends \PHPUnit\Framework\TestCase
 {
+    private function getPDO()
+    {
+        $pdo = new \PDO(getenv('DB_DSN'), getenv('DB_USER'), getenv('DB_PASS'));
+        return $pdo;
+    }
+
     public function testConnect()
     {
-        $pdo = new \PDO($GLOBALS['DB_DSN'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASS']);
+        $pdo = $this->getPDO();
         $this->assertTrue(is_object($pdo));
     }
 }

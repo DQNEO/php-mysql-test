@@ -15,10 +15,4 @@
     </whitelist>
   </filter>
 
-  <php>
-    <var name="DB_DSN" value="mysql:dbname=mysql;host=127.0.0.1" />
-    <var name="DB_USER" value="root" />
-    <var name="DB_PASS" value="pass" />
-  </php>
-
  </phpunit>

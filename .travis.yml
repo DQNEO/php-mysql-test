@@ -6,6 +6,12 @@ php:
   - 7.0
   - 7.1
 
+env:
+  global:
+    - DB_DSN="mysql:dbname=mysql;host=127.0.0.1"
+    - DB_USER="root"
+    - DB_PASS=""
+
 before_script:
   - composer install
 
