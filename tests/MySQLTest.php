@@ -16,4 +16,12 @@ class MySQLTest extends TestCase
         $pdo = $this->getPDO();
         $this->assertTrue(is_object($pdo));
     }
+
+    public function testSQL1()
+    {
+        $pdo = $this->getPDO();
+        $stmt = $pdo->prepare('SELECT 1');
+        $ret = $stmt->execute();
+        $this->assertTrue($ret);
+    }
 }
