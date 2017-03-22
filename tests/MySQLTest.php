@@ -3,15 +3,21 @@ namespace DQNEO\MySQLTest;
 
 class MySQLTest extends \PHPUnit\Framework\TestCase
 {
-    public function testConnect()
+    private function getPDO()
     {
         $pdo = new \PDO($GLOBALS['DB_DSN'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASS']);
+        return $pdo;
+    }
+
+    public function testConnect()
+    {
+        $pdo = $this->getPDO();
         $this->assertTrue(is_object($pdo));
     }
 
     public function testSQL1()
     {
-        $pdo = new \PDO($GLOBALS['DB_DSN'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASS']);
+        $pdo = $this->getPDO();
         $stmt = $pdo->prepare('SELECT 1');
         $ret = $stmt->execute();
         $this->assertTrue($ret);
