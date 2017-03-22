@@ -1,0 +1,9 @@
+{
+    "name": "dqneo/php-mysql-test",
+    "description": "test php code with mysql",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "license": "MIT"
+}
