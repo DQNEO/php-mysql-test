@@ -4,11 +4,12 @@ sudo: false
 
 php:
   - 7.1
-  - hhvm
+  - 7.2
+  - nightly
 
 matrix:
   allow_failures:
-    - php: hhvm
+    - php: nightly
 
 env:
   global:
