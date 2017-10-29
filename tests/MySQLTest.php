@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 class MySQLTest extends TestCase
 {
-    private function getPDO()
+    private function getPDO() :\PDO
     {
         $pdo = new \PDO(getenv('DB_DSN'), getenv('DB_USER'), getenv('DB_PASS'));
         return $pdo;
